@@ -14,6 +14,7 @@ canonifyURLs = true
 
 
 [params]
+  author = true  
   name = "Abdulmalik Ibikunle"
   location = "Lagos, NG"
   description = "DevOps Engineer. I automate CI/CD pipelines, manage cloud infrastructure, and ensure scalable, reliable deployments."
