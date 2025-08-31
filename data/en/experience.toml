@@ -1,0 +1,15 @@
+[[experience]]
+  role = "Junior DevOps Engineer"
+  company = "KeystoneOps"
+  company_link = "https://www.keystoneops.com" # Replace with actual URL if different
+  period = "2024 - Present"
+  country = "Remote"
+  description = "Supporting DevOps initiatives by assisting with automation, infrastructure management, and CI/CD pipelines to ensure reliable and efficient deployments." # Optional, can remove
+  responsibilities = [
+    "Assisted in designing and managing CI/CD pipelines for application deployments.",
+    "Supported containerization and orchestration using Docker and Kubernetes.",
+    "Monitored system performance and application health using Prometheus and Grafana.",
+    "Collaborated with senior engineers on cloud infrastructure (AWS, GCP, Azure).",
+    "Worked on automating infrastructure with Terraform and Ansible."
+  ]
+  technologies = ["Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana"]

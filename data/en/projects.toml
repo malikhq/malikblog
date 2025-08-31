@@ -1,0 +1,83 @@
+[[projects]]
+title = "AWS 3-Tier Web Application"
+description = "Designed and deployed a highly available 3-tier architecture on AWS (VPC, EC2, RDS, and Load Balancers). Focused on scalability, security, and fault tolerance. Automated infrastructure provisioning with Terraform."
+tech = "AWS, VPC, EC2, RDS, Load Balancer, Terraform"
+image = "/1.jpg"
+link = "https://github.com/malikhq/AWS-3-tier-Web-Application"
+
+[[projects]]
+title = "Robot Shop (Microservices Demo App)"
+description = "Deployed Robot Shop, a microservices-based demo application for Kubernetes and observability. Used Helm charts and Kubernetes manifests for deployment. Integrated with Prometheus, Grafana, and Elastic Stack for monitoring and logging."
+tech = "Kubernetes, Helm, Prometheus, Grafana, Elastic Stack"
+image = "/1.jpg"
+link = "https://github.com/malikhq/robot-shop"
+
+[[projects]]
+title = "Docker ELK Stack"
+description = "Set up a centralized logging solution using the ELK stack (Elasticsearch, Logstash, Kibana). Containerized the stack with Docker Compose for local observability. Used for log aggregation, analytics, and visualization."
+tech = "Docker, Elasticsearch, Logstash, Kibana"
+image = "/1.jpg"
+link = "https://github.com/malikhq/docker-elk"
+
+[[projects]]
+title = "CI/CD Flask Starter"
+description = "Built a Flask web app with a complete CI/CD pipeline. Automated testing, building, and deployment with GitHub Actions / Jenkins. Demonstrated DevOps fundamentals in application delivery."
+tech = "Flask, GitHub Actions, Jenkins, CI/CD"
+image = "/1.jpg"
+link = "https://github.com/malikhq/CI-CD-FlaskStarter"
+
+[[projects]]
+title = "CI/CD Assessment"
+description = "A project for testing continuous integration and delivery workflows. Explored best practices in automated pipelines, branching strategies, and deployment workflows. Good example of pipeline design & assessment exercises."
+tech = "CI/CD, GitHub Actions, Jenkins, Pipeline Design"
+image = "/1.jpg"
+link = "https://github.com/malikhq/CICD-Assessment"
+
+[[projects]]
+title = "CD with GitOps"
+description = "Implemented Continuous Delivery using GitOps principles. Managed Kubernetes deployments declaratively with ArgoCD. Ensured infrastructure and application state were always in sync with Git."
+tech = "GitOps, ArgoCD, Kubernetes, CD"
+image = "/1.jpg"
+link = "https://github.com/malikhq/CD-with-GitOps"
+
+[[projects]]
+title = "WordPress Application Deployment"
+description = "Automated the deployment of a WordPress site with database integration. Containerized using Docker and managed via Kubernetes. Focused on scalability and ease of deployment."
+tech = "WordPress, Docker, Kubernetes, MySQL"
+image = "/1.jpg"
+link = "https://github.com/malikhq/Wordpress-application"
+
+[[projects]]
+title = "Monitoring Stack"
+description = "Built a full monitoring stack using Prometheus, Grafana, and Node Exporter. Collected system and application metrics. Designed custom Grafana dashboards for visualization."
+tech = "Prometheus, Grafana, Node Exporter, Monitoring"
+image = "/1.jpg"
+link = "https://github.com/malikhq/Monitoring"
+
+[[projects]]
+title = "Observability with Grafana & Loki"
+description = "Deployed Grafana Loki for log aggregation. Integrated with Prometheus for metrics and Grafana for unified observability. End-to-end solution for metrics + logs visualization."
+tech = "Grafana, Loki, Prometheus, Observability"
+image = "/1.jpg"
+link = "https://github.com/malikhq/Observability-with-Grafana-Loki"
+
+[[projects]]
+title = "API Solution"
+description = "Designed and deployed an API-based solution with containerized services. Automated testing and deployment pipelines. Demonstrates API-first development with DevOps automation."
+tech = "API, Docker, CI/CD, Automation"
+image = "/1.jpg"
+link = "https://github.com/malikhq/Api-Solution"
+
+[[projects]]
+title = "Spring Pet Clinic"
+description = "Deployed the classic Spring PetClinic microservices app in Kubernetes. Set up CI/CD pipelines for automated builds and deployments. Focused on container orchestration and microservices automation."
+tech = "Spring Boot, Kubernetes, CI/CD"
+image = "/1.jpg"
+link = "https://github.com/malikhq/SpringPet-Clinic"
+
+[[projects]]
+title = "Postgres Replication Demo"
+description = "Implemented PostgreSQL master-slave replication for high availability. Automated deployment using Docker and Kubernetes. Showcases database reliability engineering (DBRE) skills."
+tech = "PostgreSQL, Docker, Kubernetes, Replication"
+image = "/1.jpg"
+link = "https://github.com/malikhq/Postgres-Replication-Demo"

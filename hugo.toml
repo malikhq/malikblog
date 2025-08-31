@@ -1,0 +1,64 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hugo-noir"
+
+# URL handling
+relativeURLs = true
+canonifyURLs = true
+
+# Taxonomy configuration
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+
+[params]
+  name = "Abdulmalik Ibikunle"
+  location = "Lagos, NG"
+  description = "DevOps Engineer. I automate CI/CD pipelines, manage cloud infrastructure, and ensure scalable, reliable deployments."
+  profile_image = "/static/images/profile.jpg" # Place in your site's static/images/
+  # Social links
+  github = "https://github.com/malikhq"
+  github_username = "malikhq"
+  twitter = "https://twitter.com/malik0x"
+  twitter_username = "malik0x"
+  linkedin = "https://linkedin.com/in/abdulmalik-ibikunle-8a6894177/"
+  linkedin_username = "abdulmalik-ibikunle-8a6894177"
+  email = "abdulmalik.ibikunle@gmail.com"
+  discord = "malik#1234"
+  # ... other social links ...
+
+
+
+
+
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Experience"
+    url = "/experience/"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name = "Blogs"
+    url = "/blogs/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      attribute = true
