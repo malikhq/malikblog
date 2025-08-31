@@ -1,6 +1,6 @@
 [build]
-  command = "hugo server"
+  command = "hugo --minify"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.115.1"  # your Hugo version
+  HUGO_VERSION = "0.149.0"  # your Hugo version
