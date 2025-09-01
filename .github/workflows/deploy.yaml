@@ -26,8 +26,49 @@
 #           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 #           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-name: 'Hugo Netlify Deploy'
+# name: 'Hugo Netlify Deploy'
 
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       # 1. Checkout code
+#       - uses: actions/checkout@v4
+
+#       # 2. Set up Hugo
+#       - uses: peaceiris/actions-hugo@v3
+#         with:
+#           hugo-version: '0.115.1'
+#           extended: true
+
+#       # 3. Build Hugo site
+#       - run: hugo --minify
+
+#       # 4. Install Netlify CLI
+#       - name: Install Netlify CLI
+#         run: npm install -g netlify-cli
+
+#       # 5. Deploy to Netlify
+#       - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+#         with:
+#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+#           NETLIFY_DEPLOY_MESSAGE: "Deploy from main branch push ${{ github.sha }}"
+#           NETLIFY_DEPLOY_TO_PROD: true
+#           build_directory: 'public'
+#           install_command: "echo Skipping install"
+#           build_command: "echo Skipping build"
+
+
+name: "Hugo Deploy to Netlify"
+
+# Trigger workflow on push to main
 on:
   push:
     branches:
@@ -35,32 +76,37 @@ on:
 
 jobs:
   build-and-deploy:
+    name: "Build Hugo and Deploy"
     runs-on: ubuntu-latest
 
     steps:
       # 1. Checkout code
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # 2. Set up Hugo
-      - uses: peaceiris/actions-hugo@v3
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.115.1'
+          hugo-version: '0.149.0'  # Match the version you use on Netlify
           extended: true
 
       # 3. Build Hugo site
-      - run: hugo --minify
+      - name: Build Hugo
+        run: hugo --minify
 
       # 4. Install Netlify CLI
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
       # 5. Deploy to Netlify
-      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      - name: Deploy to Netlify
+        uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Deploy from main branch push ${{ github.sha }}"
+          NETLIFY_DEPLOY_MESSAGE: "Deploy from main branch ${{ github.sha }}"
           NETLIFY_DEPLOY_TO_PROD: true
-          build_directory: 'public'
+          build_directory: "public"
           install_command: "echo Skipping install"
           build_command: "echo Skipping build"
