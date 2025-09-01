@@ -44,6 +44,6 @@ Bachelor of Science (B.Sc.)
 
 ---
 
-Download Resume [**Here**](/static/resume.pdf)
+Download Resume [**Here**](/resume.pdf)
 
 ---
