@@ -1,5 +1,6 @@
-name: Netlify CI/CD
+name: "Hugo Deploy to Netlify"
 
+# Trigger workflow on push to main
 on:
   push:
     branches:
@@ -7,25 +8,36 @@ on:
 
 jobs:
   build-and-deploy:
+    name: "Build Hugo and Deploy"
     runs-on: ubuntu-latest
+
     steps:
+      # 1. Checkout code
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: true  # ensures your theme is included if it’s a submodule
 
-      - name: Setup Hugo Extended
+      # 2. Set up Hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.149.0'
+          hugo-version: '0.149.0'  # Match the version you use on Netlify
           extended: true
 
-      - name: Build Hugo site
-        run: hugo --minify -D -F
+      # 3. Build Hugo site
+      - name: Build Hugo
+        run: hugo --minify
 
+      # 4. Install Netlify CLI
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      # 5. Deploy to Netlify
       - name: Deploy to Netlify
-        uses: jsmrcaga/action-netlify-deploy@master
+        uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DIR: public
+          NETLIFY_DEPLOY_MESSAGE: "Deploy from main branch ${{ github.sha }}"
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: "public"
+      
