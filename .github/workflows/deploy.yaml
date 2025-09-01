@@ -1,42 +1,62 @@
-name: Hugo build + Netlify deploy
+name: Netlify CI/CD
 
+# Trigger on pushes to main branch
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true       # Fetch Hugo themes
-          fetch-depth: 1         # Only fetch required history
+      # 1️⃣ Checkout the repo
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js (needed for Netlify plugins and build tools)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 3️⃣ Setup Hugo Extended
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.93.2'
+          hugo-version: '0.149.0'
+          extended: true
 
-      - name: Hugo build
-        env:
-          HUGO_ENV: production
+      # 4️⃣ Cache npm modules to speed up builds
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 5️⃣ Cache Hugo cache & modules
+      - name: Cache Hugo
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.hugo_cache
+            resources/_gen
+          key: hugo-${{ hashFiles('**/*.html', '**/*.md') }}
+
+      # 6️⃣ Install npm dependencies (if you have any frontend build tools)
+      - name: Install dependencies
+        run: npm ci
+
+      # 7️⃣ Build the site
+      - name: Build Hugo site
         run: hugo --minify
 
+      # 8️⃣ Deploy to Netlify
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2.3
-        env:
+        uses: jsmrcaga/action-netlify-deploy@master
+        with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          publish-dir: './public'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "GitHub Actions deploying commit: ${{ github.event.head_commit.message }}"
-          enable-pull-request-comment: false
-          enable-commit-comment: false
-          overwrites-pull-request-comment: false
-          timeout-minutes: 1
+          NETLIFY_DIR: public
