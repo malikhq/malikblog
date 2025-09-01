@@ -1,79 +1,16 @@
 [[blogs]]
 title = "Terraform Best Practices: Consistent, Secure, Maintainable"
-date = "2025-08-31"
+date = "2025-09-01"
 summary = "Learn how to write Terraform code that is consistent, secure, and easy to maintain."
 tags = ["Terraform", "DevOps", "IaC", "Best Practices"]
-content = """
-Infrastructure as Code (IaC) with Terraform allows DevOps teams to define, manage, and scale infrastructure in a repeatable and reliable way.  
-Writing Terraform isn’t just about “making it work”—it’s about making it consistent, secure, and easy to maintain.
-
-## Best Practices
-
-### 1. Use Version Control (GitOps Mindset)
-- Keep Terraform code in Git repositories.
-- Follow branching strategies (`main`, `develop`, feature branches).
-- Use pull requests for code reviews.
-
-### 2. Keep Code Modular
-- Break large Terraform files into modules (VPC, EC2, RDS).
-- Reuse modules across environments.
-- Publish reusable modules in a private registry or Git repo.
-
-### 3. Naming Conventions & Tags
-- Use consistent naming (`project-env-role`).
-- Apply tags like Owner, Environment, CostCenter.
-
-### 4. Remote State Management
-- Use remote backends (S3 + DynamoDB, GCS, Terraform Cloud).
-- Enable state locking.
-
-### 5. Secrets Management
-- Don’t hardcode secrets.
-- Use secret managers (Vault, AWS Secrets Manager).
-- Reference secrets securely via variables.
-"""
-link = "/my-first-blog.md"
+link = "https://medium.com/@abdulmalik.ibikunle/terraform-best-practices-for-infrastructure-as-code-iac-309186d4901b"
 
 [[blogs]]
 title = "Terraform in Action: Linting, Planning, and Security"
-date = "2025-08-31"
+date = "2025-09-01"
 summary = "Level up your Terraform workflow with automated checks, environment management, and security-first design."
 tags = ["Terraform", "DevOps", "IaC", "CI/CD", "Security"]
-content = """
-### 6. Linting & Formatting
-- Run `terraform fmt` for consistent code.
-- Use `terraform validate` to catch errors early.
-- Integrate static analysis tools like Checkov or tflint.
-
-### 7. Plan Before Apply
-- Always run `terraform plan` before `terraform apply`.
-- Review changes carefully.
-- Consider approval workflows in CI/CD pipelines.
-
-### 8. Manage Environments Properly
-- Separate state files for dev, staging, prod.
-- Avoid sharing state across environments.
-- Use workspaces only for identical environments.
-
-### 9. Documentation & Collaboration
-- Document modules with README.md.
-- Use variable descriptions and examples.
-- Share knowledge to avoid single points of failure.
-
-### 10. Security & Least Privilege
-- Follow least privilege for IAM roles.
-- Rotate credentials regularly.
-- Use policy-as-code tools (OPA, Sentinel) to enforce rules.
-
-### Terraform CLI Tips
-- Format Everything: `terraform fmt`
-- Validate Before Deploy: `terraform validate`
-- Lint for Best Practices: `tflint`
-- Scan for Security: Checkov
-- Auto-Generate Docs: `terraform-docs`
-
-💡 Pro Tip: Add these checks to CI/CD pipelines to ensure consistent, secure, and reliable infrastructure.
-"""
+link = "https://medium.com/@abdulmalik.ibikunle/terraform-like-a-pro-5-game-changing-iac-practices-d6716774bb5f"
 
 
 [[blogs]]
