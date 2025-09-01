@@ -8,10 +8,13 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       # 1️⃣ Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          submodules: true  # ensures theme submodules are pulled if any
 
       # 2️⃣ Setup Hugo Extended
       - name: Setup Hugo
@@ -29,9 +32,9 @@ jobs:
             resources/_gen
           key: hugo-${{ hashFiles('**/*.html', '**/*.md') }}
 
-      # 4️⃣ Build Hugo site
+      # 4️⃣ Build the Hugo site
       - name: Build Hugo site
-        run: hugo --minify
+        run: hugo --minify --buildDrafts --buildFuture --verbose
 
       # 5️⃣ Deploy to Netlify
       - name: Deploy to Netlify
