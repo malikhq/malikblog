@@ -1,22 +1,27 @@
-name: 'Netlify Deploy'
+name: Netlify Deploy
 
 on:
   push:
-    branches:
-      - main
-  release:
-    types: ['published']
+    branches: [main]
 
 jobs:
   deploy:
-    name: 'Deploy'
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-      - uses: jsmrcaga/action-netlify-deploy@master
+
+      - name: Install Hugo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hugo
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
         with:
+          args: deploy --dir=public --prod --message "Prod deploy v${{ github.sha }}"
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-          NETLIFY_DEPLOY_TO_PROD: true
