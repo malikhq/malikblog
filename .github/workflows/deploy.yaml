@@ -8,35 +8,21 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout the repository
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # ensures theme submodules are pulled if any
+          submodules: true  # ensures your theme is included if it’s a submodule
 
-      # 2️⃣ Setup Hugo Extended
-      - name: Setup Hugo
+      - name: Setup Hugo Extended
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.149.0'
           extended: true
 
-      # 3️⃣ Cache Hugo build artifacts for faster rebuilds
-      - name: Cache Hugo
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.hugo_cache
-            resources/_gen
-          key: hugo-${{ hashFiles('**/*.html', '**/*.md') }}
-
-      # 4️⃣ Build the Hugo site
       - name: Build Hugo site
-        run: hugo --minify --buildDrafts --buildFuture --verbose
+        run: hugo --minify -D -F
 
-      # 5️⃣ Deploy to Netlify
       - name: Deploy to Netlify
         uses: jsmrcaga/action-netlify-deploy@master
         with:
