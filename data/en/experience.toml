@@ -1,15 +1,15 @@
 [[experience]]
-  role = "Junior DevOps Engineer"
-  company = "KeystoneOps"
-  company_link = "https://www.keystoneops.com" # Replace with actual URL if different
-  period = "2024 - Present"
-  country = "Remote"
-  description = "Supporting DevOps initiatives by assisting with automation, infrastructure management, and CI/CD pipelines to ensure reliable and efficient deployments." # Optional, can remove
-  responsibilities = [
-    "Assisted in designing and managing CI/CD pipelines for application deployments.",
-    "Supported containerization and orchestration using Docker and Kubernetes.",
-    "Monitored system performance and application health using Prometheus and Grafana.",
-    "Collaborated with senior engineers on cloud infrastructure (AWS, GCP, Azure).",
-    "Worked on automating infrastructure with Terraform and Ansible."
-  ]
-  technologies = ["Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana"]
+role = "Junior DevOps Engineer"
+company = "Freelance / Independent Projects"
+company_link = "https://github.com/malikhq" # Replace with actual URL if different
+period = "Jan 2024 – Present"
+country = "Remote"
+description = "Delivered DevOps solutions for freelance and independent projects, focusing on automation, infrastructure as code, observability, and reliable deployments."
+responsibilities = [
+  "Built and deployed infrastructure for an inventory management system using Terraform and AWS.",
+  "Developed and containerized multi-service applications (e.g., URL shortener, ecommerce app) with Docker, deployed across multiple environments.",
+  "Created automated pipelines with GitHub Actions for continuous integration and deployment to AWS EC2.",
+  "Configured monitoring and real-time analytics for a crypto price tracker API using Prometheus and Grafana.",
+  "Integrated toolchains with Slack, Jira, Confluence, Jenkins, GitHub Actions, JFrog Artifactory, Docker, Kubernetes, Ansible, and observability stacks."
+]
+technologies = ["Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana", "GitHub Actions", "Jenkins", "JFrog Artifactory"]

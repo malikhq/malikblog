@@ -32,7 +32,6 @@ Writing Terraform isn’t just about “making it work”—it’s about making 
 - Use secret managers (Vault, AWS Secrets Manager).
 - Reference secrets securely via variables.
 """
-link = "https://medium.com/@yourprofile/terraform-best-practices-part1"
 
 [[blogs]]
 title = "Terraform in Action: Linting, Planning, and Security"
@@ -74,4 +73,27 @@ content = """
 
 💡 Pro Tip: Add these checks to CI/CD pipelines to ensure consistent, secure, and reliable infrastructure.
 """
-link = "https://medium.com/@yourprofile/terraform-best-practices-part2"
+
+
+[[blogs]]
+title = "Deploying a Secure and Scalable 3-Tier Web Application on AWS with Terraform"
+date = "2025-08-09"
+summary = "Step-by-step guide to building a production-ready, modular, and secure 3-tier architecture on AWS using Terraform."
+tags = ["Terraform", "AWS", "DevOps", "Infrastructure", "IaC"]
+link = "https://medium.com/@abdulmalik.ibikunle/deploying-a-secure-and-scalable-3-tier-web-application-on-aws-with-terraform-4434f05aa0bb"
+
+[[blogs]]
+title = "Automating Flask App Deployment with Docker and GitHub Actions"
+date = "2025-08-20"
+summary = "Learn how to containerize a Flask application with Docker and set up a GitHub Actions pipeline for automated builds and deployments."
+tags = ["Flask", "Docker", "GitHub Actions", "DevOps", "CI/CD"]
+link = "https://medium.com/@abdulmalik.ibikunle/automating-flask-app-deployment-with-docker-and-github-actions-aa29877ab643"
+
+[[blogs]]
+title = "Observability in Microservices: Using Elastic Stack, Prometheus & Grafana with Docker"
+date = "2025-04-15"
+summary = "A practical guide to implementing observability in microservices with Elasticsearch, Logstash, Kibana, Prometheus, and Grafana using Docker."
+tags = ["Observability", "Elastic Stack", "Prometheus", "Grafana", "Docker", "Microservices"]
+link = "https://medium.com/@abdulmalik.ibikunle/observability-in-microservices-using-elastic-stack-prometheus-grafana-with-docker-0bd189fdb93c"
+
+
