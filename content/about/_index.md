@@ -4,7 +4,7 @@ draft: false
 title: 'About'
 ---
 
-# Hi, I’m Abdulmalik Ibikunle  
+# 👋 Hi, I’m Abdulmalik Ibikunle  
 
 I’m a passionate **DevOps Engineer** based in Lagos, Nigeria.  
 With over **1 year of hands-on experience**, I specialize in designing, automating, and deploying **cloud-native applications** using tools like **AWS, Docker, Kubernetes, GitHub Actions, and Terraform**.  
