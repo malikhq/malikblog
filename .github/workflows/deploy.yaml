@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download public directory
-        uses: actions/download-artifact@v2
+        uses: aactions/upload-artifact@v3
         with:
           name: public
           path: public/
