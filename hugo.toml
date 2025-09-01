@@ -1,10 +1,10 @@
 baseURL = 'https://malikhq.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Malik Site'
 theme = "hugo-noir"
 
 # URL handling
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = true
 
 # Taxonomy configuration
