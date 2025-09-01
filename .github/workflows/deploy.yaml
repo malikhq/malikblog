@@ -2,27 +2,29 @@ name: CI/CD
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   build:
     name: Build static artifacts using Hugo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: true  # Fetch Hugo themes
           fetch-depth: 50
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v5
         with:
-          hugo-version: '0.149.0'
+          hugo-version: '0.115.0'   # Latest stable Hugo version
+          extended: true
+
       - name: Build
         run: hugo --gc --minify
+
       - name: Upload public directory
         if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: public
           path: public/
@@ -34,14 +36,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download public directory
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: public
           path: public/
+
       - name: Publish
-        uses: netlify/actions/cli@v1
+        uses: netlify/actions/cli@v2
         with:
-          args: deploy --dir=public --prod
+          args: deploy -p --dir=public
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
