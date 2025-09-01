@@ -28,7 +28,6 @@
 
 name: 'Hugo Netlify Deploy'
 
-# Trigger on push to main branch
 on:
   push:
     branches:
@@ -36,32 +35,27 @@ on:
 
 jobs:
   build-and-deploy:
-    name: 'Build Hugo and Deploy to Netlify'
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repo
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # 1. Checkout code
+      - uses: actions/checkout@v4
 
       # 2. Set up Hugo
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.115.1' # Replace with your Hugo version
+          hugo-version: '0.115.1'
           extended: true
 
-      # 3. Install npm dependencies (if using any)
-      - name: Install npm dependencies
-        run: npm ci || echo "No npm dependencies"
+      # 3. Build Hugo site
+      - run: hugo --minify
 
-      # 4. Build Hugo site
-      - name: Build Hugo site
-        run: hugo --minify
+      # 4. Install Netlify CLI
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
 
       # 5. Deploy to Netlify
-      - name: Deploy to Netlify
-        uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
