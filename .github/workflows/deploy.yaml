@@ -40,4 +40,5 @@ jobs:
           NETLIFY_DEPLOY_MESSAGE: "Deploy from main branch ${{ github.sha }}"
           NETLIFY_DEPLOY_TO_PROD: true
           build_directory: "public"
-      
+          install_command: "echo Skipping install"
+          build_command: "echo Skipping build"

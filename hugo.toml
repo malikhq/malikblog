@@ -4,7 +4,7 @@ title = 'Malik Site'
 theme = "hugo-noir"
 
 # URL handling
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = true
 
 # Taxonomy configuration
