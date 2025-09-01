@@ -1,19 +1,72 @@
-name: 'Netlify Deploy'
+name: Netlify Deploy
 
 on:
+  workflow_dispatch:
+  pull_request:
   push:
     branches:
       - main
-jobs:
-  deploy:
-    name: 'Deploy'
-    runs-on: ubuntu-latest
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: jsmrcaga/action-netlify-deploy@master
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.134.3"
+          extended: true
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.23"
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Project Setup and Build
+        run: |
+          pnpm project-setup
+          pnpm build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: "./public"
+          production-branch: main
+          github-token: ${{ secrets.NETLIFY_GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-          NETLIFY_DEPLOY_TO_PROD: true
+        timeout-minutes: 1
