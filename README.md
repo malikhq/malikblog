@@ -192,8 +192,6 @@ malikblog/
 Contributions are welcome! You can:
 
 1. Fork the repository.
-2. Make changes in your branch.
-3. Submit a pull request describing your updates.
 
 ---
 
