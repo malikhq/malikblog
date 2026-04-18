@@ -6,16 +6,16 @@ period = "Jan 2024 – Present"
 country = "Remote, Fulltime"
 description = "Delivered DevOps solutions and independent projects, focusing on automation, infrastructure as code, observability, and reliable deployments."
 responsibilities = [
-  "Designed and operated secure, production-grade Amazon EKS clusters with IRSA-based IAM, enforcing strict workload isolation and least-privilege access control"
-  "Built multi-environment infrastructure (dev, staging, production) using Terraform and Ansible, improving infrastructure consistency and reducing manual provisioning overhead"
-  "Designed resilient VPC architectures with segmented networking (public/private subnets, NAT gateways, route tables), improving system security and availability"
-  "Strengthened supply chain security using Cosign image signing and verification, ensuring only trusted container images are deployed"
-  "Enforced Kubernetes security policies using OPA Gatekeeper and Kyverno, preventing privileged workloads and enforcing runtime security standards"
-  "Implemented OIDC-based authentication for CI/CD pipelines, eliminating long-lived credentials and improving security compliance posture"
-  "Built a full observability stack using OpenTelemetry, Prometheus, Loki, Tempo, and Grafana, significantly improving system visibility and incident detection capabilities"
-  "Improved operational reliability of production platforms (including Fineract Core Banking systems) by enhancing monitoring, alerting, and deployment safety"
-  "Integrated LLM-based tooling (Ollama, ChatGPT, Claude) into DevOps workflows to accelerate log analysis, incident triage, and root cause identification"
-  "Developed AI-assisted troubleshooting workflows for Kubernetes and CI/CD pipelines, reducing debugging complexity and improving engineering efficiency"
+  "Designed and operated secure, production-grade Amazon EKS clusters with IRSA-based IAM, enforcing strict workload isolation and least-privilege access control",
+  "Built multi-environment infrastructure (dev, staging, production) using Terraform and Ansible, improving infrastructure consistency and reducing manual provisioning overhead",
+  "Designed resilient VPC architectures with segmented networking (public/private subnets, NAT gateways, route tables), improving system security and availability",
+  "Strengthened supply chain security using Cosign image signing and verification, ensuring only trusted container images are deployed",
+  "Enforced Kubernetes security policies using OPA Gatekeeper and Kyverno, preventing privileged workloads and enforcing runtime security standards",
+  "Implemented OIDC-based authentication for CI/CD pipelines, eliminating long-lived credentials and improving security compliance posture",
+  "Built a full observability stack using OpenTelemetry, Prometheus, Loki, Tempo, and Grafana, significantly improving system visibility and incident detection capabilities",
+  "Improved operational reliability of production platforms (including Fineract Core Banking systems) by enhancing monitoring, alerting, and deployment safety",
+  "Integrated LLM-based tooling (Ollama, ChatGPT, Claude) into DevOps workflows to accelerate log analysis, incident triage, and root cause identification",
+  "Developed AI-assisted troubleshooting workflows for Kubernetes and CI/CD pipelines, reducing debugging complexity and improving engineering efficiency",
   "Applied prompt-engineering techniques to standardize incident reports and operational runbooks, improving consistency and response quality during outages"
 
 ]
