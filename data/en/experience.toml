@@ -1,15 +1,56 @@
 [[experience]]
-role = "Junior DevOps Engineer"
-company = "Freelance / Independent Projects"
+role = "DevOps Engineer"
+company = "KeystoneOps"
 company_link = "https://github.com/malikhq" # Replace with actual URL if different
 period = "Jan 2024 – Present"
-country = "Remote"
-description = "Delivered DevOps solutions for freelance and independent projects, focusing on automation, infrastructure as code, observability, and reliable deployments."
+country = "Remote, Fulltime"
+description = "Delivered DevOps solutions and independent projects, focusing on automation, infrastructure as code, observability, and reliable deployments."
 responsibilities = [
-  "Built and deployed infrastructure for an inventory management system using Terraform and AWS.",
-  "Developed and containerized multi-service applications (e.g., URL shortener, ecommerce app) with Docker, deployed across multiple environments.",
-  "Created automated pipelines with GitHub Actions for continuous integration and deployment to AWS EC2.",
-  "Configured monitoring and real-time analytics for a crypto price tracker API using Prometheus and Grafana.",
-  "Integrated toolchains with Slack, Jira, Confluence, Jenkins, GitHub Actions, JFrog Artifactory, Docker, Kubernetes, Ansible, and observability stacks."
+  "Designed and operated secure, production-grade Amazon EKS clusters with IRSA-based IAM, enforcing strict workload isolation and least-privilege access control"
+  "Built multi-environment infrastructure (dev, staging, production) using Terraform and Ansible, improving infrastructure consistency and reducing manual provisioning overhead"
+  "Designed resilient VPC architectures with segmented networking (public/private subnets, NAT gateways, route tables), improving system security and availability"
+  "Strengthened supply chain security using Cosign image signing and verification, ensuring only trusted container images are deployed"
+  "Enforced Kubernetes security policies using OPA Gatekeeper and Kyverno, preventing privileged workloads and enforcing runtime security standards"
+  "Implemented OIDC-based authentication for CI/CD pipelines, eliminating long-lived credentials and improving security compliance posture"
+  "Built a full observability stack using OpenTelemetry, Prometheus, Loki, Tempo, and Grafana, significantly improving system visibility and incident detection capabilities"
+  "Improved operational reliability of production platforms (including Fineract Core Banking systems) by enhancing monitoring, alerting, and deployment safety"
+  "Integrated LLM-based tooling (Ollama, ChatGPT, Claude) into DevOps workflows to accelerate log analysis, incident triage, and root cause identification"
+  "Developed AI-assisted troubleshooting workflows for Kubernetes and CI/CD pipelines, reducing debugging complexity and improving engineering efficiency"
+  "Applied prompt-engineering techniques to standardize incident reports and operational runbooks, improving consistency and response quality during outages"
+
 ]
-technologies = ["Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana", "GitHub Actions", "Jenkins", "JFrog Artifactory"]
+technologies = ["Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "Prometheus", "Grafana", "GitHub Actions", "Jenkins", "Ollama", "Claude"]
+
+[[experience]]
+role = "Kubernetes & DevOps Engineer (Mentorship Program)"
+company = "DevOps-as-a-Service (DaaS.ng)"
+company_link = "https://daas.ng" # Replace if different
+period = "Aug 2025 – Dec 2025"
+country = "Remote, Nigeria"
+description = "Hands-on Kubernetes and cloud-native engineering program focused on production-grade DevOps practices, automation, and platform reliability."
+responsibilities = [
+  "Gained practical experience in Kubernetes cluster operations including scheduling, networking, scaling, and workload management in production-like environments",
+  "Built and maintained CI/CD pipelines using GitOps principles to enable automated, version-controlled application deployments",
+  "Provisioned and managed cloud infrastructure using Infrastructure as Code (Terraform), ensuring reproducibility and scalability across environments",
+  "Implemented monitoring and observability stacks to track system health, performance metrics, and application behavior",
+  "Applied Kubernetes security best practices including RBAC, Pod Security Standards, and secure secrets management",
+  "Collaborated remotely with mentors and engineers to troubleshoot production-like incidents and improve system reliability"
+]
+technologies = ["Kubernetes", "Terraform", "GitOps", "ArgoCD", "Docker", "Prometheus", "Grafana", "CI/CD"]
+
+[[experience]]
+role = "Linux Systems Administrator (Intern, Remote)"
+company = "Cloudware Innovative Technologies"
+company_link = "https://cloudware.com" # Replace with actual URL if different
+period = "Jun 2023 – Jan 2024"
+country = "Ibadan, Nigeria (Remote)"
+description = "Supported enterprise infrastructure operations through Linux system administration, virtualization, networking, and server management."
+responsibilities = [
+  "Installed, configured, and administered Linux servers (Ubuntu, RedHat, CentOS) and Windows systems, managing users, groups, permissions, and system policies",
+  "Deployed and maintained hypervisors to provision and manage multiple virtual machines across enterprise environments",
+  "Configured and managed web and application servers including Apache HTTP and Tomcat for hosting and deployment",
+  "Implemented security hardening measures including firewall rules, IP filtering, port management, and regular patching",
+  "Diagnosed and resolved network issues using OSI model principles, TCP/IP troubleshooting, and IP addressing strategies",
+  "Supported system monitoring and automation initiatives to improve uptime, performance, and operational efficiency"
+]
+technologies = ["Linux", "Windows Server", "VMware/Virtualization", "Apache", "Tomcat", "Networking", "Firewall", "TCP/IP"]

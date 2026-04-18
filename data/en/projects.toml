@@ -1,4 +1,11 @@
 [[projects]]
+title = "Project Infrastructure"
+description = "Terraform-based infrastructure code to deploy and manage a modular AWS EKS cluster, including VPC setup, add-ons (ArgoCD, CloudWatch, Kyverno), and cluster bootstrapping scripts."
+tech = "AWS, VPC, EC2, RDS, Load Balancer, EKS, Argocd, Terraform"
+image = "/1.jpg"
+link = "https://github.com/malikhq/project-infrastructure.git"
+
+[[projects]]
 title = "AWS 3-Tier Web Application"
 description = "Designed and deployed a highly available 3-tier architecture on AWS (VPC, EC2, RDS, and Load Balancers). Focused on scalability, security, and fault tolerance. Automated infrastructure provisioning with Terraform."
 tech = "AWS, VPC, EC2, RDS, Load Balancer, Terraform"

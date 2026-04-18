@@ -6,10 +6,7 @@ title: 'About'
 
 # 👋 Hi, I’m Abdulmalik Ibikunle  
 
-I’m a passionate **DevOps Engineer** based in Lagos, Nigeria.  
-With over **2 year of hands-on experience**, I specialize in designing, automating, and deploying **cloud-native applications** using tools like **AWS, Docker, Kubernetes, GitHub Actions, and Terraform**.  
-
-My journey in DevOps has been fueled by curiosity and the drive to streamline development processes — from **automating CI/CD pipelines** and **container orchestration** to **infrastructure as code (IaC)** and **observability practices**.  
+A DevOps Engineer with 3+ years of experience designing, securing, and operating scalable cloud-native infrastructure across AWS, GCP, and Azure. Specialized in Kubernetes platform engineering, Infrastructure-as-Code (Terraform, Ansible), and GitOps-driven CI/CD automation for production-grade systems. Recently expanded into AIOps and intelligent automation, integrating LLM-based tools (Ollama, ChatGPT, Claude) into DevOps workflows to improve incident response, accelerate log analysis, and enhance root cause detection. Strong focus on platform reliability, security hardening, and observability engineering (Prometheus, Grafana, Loki), with a track record of building resilient, high-availability systems and improving developer productivity through automation. 
 
 ---
 
@@ -25,15 +22,23 @@ My journey in DevOps has been fueled by curiosity and the drive to streamline de
 
 ## Skills  
 
-- **Cloud Platforms**: AWS, Google Cloud Platform, Azure  
-- **Infrastructure as Code (IaC)**: Terraform  
-- **CI/CD**: GitHub Actions, Bitbucket Pipelines, Jenkins  
-- **Containers & Orchestration**: Docker, Kubernetes, Helm  
-- **Scripting & Automation**: Bash, Python  
-- **Monitoring & Observability**: Prometheus, Grafana, Loki, ELK Stack, OpenTelemetry, Tempo  
-- **Version Control**: Git (GitHub, GitLab, Bitbucket)  
-- **Configuration Management**: Ansible  
-- **Dev Tools**: VS Code, Linux CLI  
+- **Cloud Platforms**: AWS, Google Cloud Platform (GCP), Microsoft Azure  
+
+- **Infrastructure as Code (IaC)**: Terraform (modular architecture), Ansible  
+
+- **GitOps & CI/CD**: ArgoCD (App-of-Apps, ApplicationSets), GitHub Actions, Jenkins, Bitbucket Pipelines  
+
+- **Containers & Orchestration**: Docker, Kubernetes, Helm (custom chart development)  
+
+- **Monitoring & Observability**: Grafana Alloy, OpenTelemetry (OTel), Prometheus, Loki, Tempo, Datadog, ELK Stack  
+
+- **Security & Compliance**: IAM (fine-grained roles), Kubernetes RBAC, Pod Security Standards (PSS), Network Policies, Sealed Secrets, External Secrets Operator, HashiCorp Vault, Trivy (container/image scanning), OPA Gatekeeper, Kyverno  
+
+- **Networking & DNS**: VPC design (subnets, route tables, NAT gateways), Security Groups (ingress/egress control), Route 53, Cloudflare, GoDaddy, External-DNS automation  
+
+- **AIOps & Intelligent Automation**: Ollama (local LLMs), ChatGPT, Claude, prompt engineering, AI-assisted debugging, log analysis automation, incident summarization, runbook automation  
+
+- **Scripting & Tooling**: Bash, Python (automation), Linux CLI, VS Code, Postman, curl, yq, jq   
 
 ---
 
@@ -44,6 +49,6 @@ Bachelor of Science (B.Sc.)
 
 ---
 
-Download Resume [**Here**](/resume.pdf)
+Download Resume [**Here**](/static/ABDULMALIK-IBIKUNLE.pdf)
 
 ---
