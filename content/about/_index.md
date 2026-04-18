@@ -49,6 +49,6 @@ Bachelor of Science (B.Sc.)
 
 ---
 
-Download Resume [**Here**](/static/ABDULMALIK-IBIKUNLE.pdf)
+Download Resume [**Here**](/ABDULMALIK-IBIKUNLE.pdf)
 
 ---
