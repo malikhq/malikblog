@@ -6,7 +6,7 @@ title: 'About'
 
 # 👋 Hi, I’m Abdulmalik Ibikunle  
 
-A DevOps Engineer with 3+ years of experience designing, securing, and operating scalable cloud-native infrastructure across AWS, GCP, and Azure. Specialized in Kubernetes platform engineering, Infrastructure-as-Code (Terraform, Ansible), and GitOps-driven CI/CD automation for production-grade systems. Recently expanded into AIOps and intelligent automation, integrating LLM-based tools (Ollama, ChatGPT, Claude) into DevOps workflows to improve incident response, accelerate log analysis, and enhance root cause detection. Strong focus on platform reliability, security hardening, and observability engineering (Prometheus, Grafana, Loki), with a track record of building resilient, high-availability systems and improving developer productivity through automation. 
+DevOps Engineer with 3+ years of experience designing, securing, and operating scalable cloud-native infrastructure across AWS, GCP, and Azure. Specialized in Kubernetes platform engineering Infrastructure-as-Code (Terraform, Ansible), and GitOps-driven CI/CD automation for production-grade systems. Recently expanded into AIOps and intelligent automation, integrating LLM-based tools (Ollama, ChatGPT, Claude) into DevOps workflows to improve incident response, accelerate log analysis, and enhance root cause detection. Strong focus on platform reliability, security hardening, and observability engineerin (Prometheus, Grafana, Loki), with a track record of building resilient, high-availability systems and improving developer productivity through automation.
 
 ---
 
@@ -49,6 +49,6 @@ Bachelor of Science (B.Sc.)
 
 ---
 
-Download Resume [**Here**](/ABDULMALIK-IBIKUNLE.pdf)
+Download Resume [**Here**](/static/ABDULMALIK%20IBIKUNLE_DevOps%20Engineer.pdf)
 
 ---
