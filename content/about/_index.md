@@ -49,6 +49,6 @@ Bachelor of Science (B.Sc.)
 
 ---
 
-Download Resume [**Here**](/static/ABDULMALIK%20IBIKUNLE_DevOps%20Engineer.pdf)
+Download Resume [**Here**](/ABDULMALIK%20IBIKUNLE_DevOps%20Engineer.pdf)
 
 ---
