@@ -5,7 +5,6 @@ This repository contains the source code and configuration for my personal websi
 The site showcases my portfolio, blog posts, projects, and other professional details.
 
 ---
-
 ## Table of Contents
 
 * [Features](#features)
