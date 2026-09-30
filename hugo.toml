@@ -12,7 +12,6 @@ canonifyURLs = true
   category = "categories"
   tag = "tags"
 
-
 [params]
   author = true  
   name = "Abdulmalik Ibikunle"
