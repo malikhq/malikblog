@@ -1,5 +1,6 @@
 # Malik Personal Website
 
+
 This repository contains the source code and configuration for my personal website **[MalikSite](https://malikhq.netlify.app/)**. The website is built using **Hugo**, a fast and flexible static site generator, and is deployed on **Netlify**.
 
 The site showcases my portfolio, blog posts, projects, and other professional details.
